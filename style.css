@@ -1,0 +1,790 @@
+:root {
+  --warna-utama: #1A4D2E;
+  --warna-gradasi-utama: #4F6F52;
+  --warna-kedua: #E8DFCA;
+  --warna-gradasi-kedua: #ffffff;
+  --warna-hitam: #000000;
+  --background: #ffffff;
+  --text-color: #414856;
+  --primary-color: #1A4D2E;
+  --border-radius: 10px;
+  --width: 190px;    
+  --height: 55px;  
+}
+
+
+*{
+  margin:0;
+	padding:0;
+	box-sizing: border-box;
+  scroll-behavior: smooth;
+  transition: all .2s ease-in-out;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+}
+
+/* Navigasi */
+.navigasi {
+  background-color: var(--warna-gradasi-kedua);
+  color: var(--warna-utama);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+}
+
+.container-nav {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+}
+
+.logo img {
+  width:80px;
+  height: auto;
+}
+
+.bungkus-dropdown {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter";
+  font-size: larger;
+  font-weight: 500;
+  display: inline-flex;
+  padding: 0 20px;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 2;
+}
+
+.bungkus-dropdown .dropdown {
+  margin-right: 35px;
+  position: relative;
+}
+
+.bungkus-dropdown .dropdown a {
+  color: var(--warna-hitam);
+  text-decoration: none;
+  transition: all color 0.3s es;
+}
+
+.bungkus-dropdown .dropdown a:hover {
+  /* color: var(--warna-gradasi-kedua); */
+}
+
+.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--warna-gradasi-kedua);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  min-width: 160px;
+  padding: 20px 40px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: var(--warna-hitam);
+  padding: 10px 50px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  border-radius: 10px;
+  margin: auto;
+}
+
+.dropdown-content a:hover {
+  /* background-color: var(--warna-gradasi-utama); */
+  color: var(--warna-utama);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.checkbtn {
+  font-size: 30px;
+  color: var(--warna-hitam);
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+/* navigasi di kanan */
+
+.navlogin {
+  display: flex;
+}
+
+.login a{
+  color: var(--warna-utama);
+}
+
+.login {
+  font-size: 25px;
+  padding: 10px 40px;
+}
+
+.search {    
+  background: var(--background);
+  width: auto;
+  height: var(--height);
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--border-radius);
+  box-shadow: 0 10px 30px rgba(#414856, .05);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  input[type="text"] {
+    position: relative;
+    width: var(--height);
+    height: var(--height);
+    font: 400 16px 'Varela Round', sans-serif;
+    color: var(--text-color);
+    border: 0;
+    box-sizing: border-box;
+    outline: none;
+    padding: 0 0 0 40px;
+    transition: width .5s ease;
+    z-index: 10;
+    opacity: 0;
+    cursor: pointer;
+    &:focus {
+      z-index: 0;
+      opacity: 1;
+      width: var(--width);
+      ~ .symbol {
+        &::before {
+          width: 0%;
+        }
+        &:after {
+          clip-path: inset(0% 0% 0% 100%);
+          transition: clip-path .04s linear .105s;
+        }
+        .cloud {
+          top: -30px;
+          left: -30px;
+          transform: translate(0, 0);
+          transition: all .5s ease;
+        }
+        .lens {
+          top: 20px;
+          left: 15px;
+          transform: translate(0, 0);
+          fill: var(--primary-color);
+          transition: top .5s ease .1s, left .5s ease .1s, fill .3s ease;
+        }
+      }
+    }
+  }
+  .symbol {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:before {
+      content:"";
+      position: absolute;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--primary-color);
+      z-index: -1;
+      transition: width .6s ease;
+    }
+    &:after {
+      content:"";
+      position: absolute;
+      top: 21px;
+      left: 21px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--primary-color);
+      z-index: 1;
+      clip-path: inset(0% 0% 0% 0%);
+      transition: clip-path .04s linear .225s;
+    }
+    .cloud,
+    .lens {
+      position: absolute;
+      fill: #fff;
+      stroke: none;
+      top: 50%;
+      left: 50%;
+    }
+    .cloud {
+      width: 35px;
+      height: 32px;
+      transform: translate(-50%, -60%);
+      transition: all .6s ease;
+    }
+    .lens {
+      fill: #fff;
+      width: 16px;
+      height: 16px;
+      z-index: 2;
+      top: 24px;
+      left: 24px;
+      transition: top .3s ease, left .3s ease, fill .2s ease .2s;
+    }
+  }
+}
+
+//--- ######## GAK NGARUH KE BODY ##########
+body {
+  background: #E8EBF3;
+  height: 100vh;
+  font: 400 16px 'Varela Round', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .socials {
+    position: fixed;
+    display: block;
+    left: 20px;
+    bottom: 20px;
+    > a {
+      display: block;
+      width: 30px;
+      opacity: var(--opacity, .2);
+      transform: scale(var(--scale, .8));
+      transition: transform .3s cubic-bezier(0.38,-0.12, 0.24, 1.91);
+      &:hover {
+        --scale: 1;
+      }
+    }
+  }
+}
+
+/* Navigasi Responsif */
+@media (max-width: 720px) {
+  .checkbtn {
+    display: block;
+    order: 1;
+    margin-right: 10px;
+  }
+
+  .bungkus-dropdown {
+    position: fixed;
+    top: 94px;
+    right: -100%;
+    background-color: var(--warna-gradasi-kedua);
+    width: 100%;
+    height: calc(100% - 80px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 20px;
+    transition: all 0.3s;
+    overflow-y: auto;
+  }
+
+  .bungkus-dropdown .dropbtn{
+    margin: 50px 20px;
+    width: 190%;
+  }
+  .bungkus-dropdown .dropdown {
+    margin: 40px 20px;
+    width: 190%;
+  }
+
+  .bungkus-dropdown .dropbtn a {
+    margin-left: 20px;
+    font-size: 20px;
+  }
+  .bungkus-dropdown .dropdown-content a {
+    margin-left: -30px;
+    font-size: 20px;
+  }
+
+  .dropdown-content {
+    position: relative;
+    background-color: var(--warna-gradasi-kedua);
+    box-shadow: none;
+    min-width: 0;
+    padding: 0;
+    width: 50%;
+  }
+
+  .dropdown-content a {
+    text-align: center
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #check:checked ~ .bungkus-dropdown {
+    right: 0;
+  }
+
+  .search {
+    margin-left: calc(580px - 100%); 
+  }
+}
+
+/* Slider gk jadi */
+.gambar-slider img {
+  max-width: 78%;
+  height: auto;
+  border-radius: 10px; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.164);
+}
+
+.bungkus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.slider-text {
+  display: inline-block;
+  position: absolute;
+  font-family: "Inter";
+  position: absolute; 
+  top: 45%;
+  left: 30%; 
+  transform: translate(-50%, -50%); 
+  color: var(--warna-hitam); 
+  text-align: left; 
+  margin: 0;
+  display: inline-block;
+  line-height: 1.5;
+}
+
+.slider-text h2{
+  font-size: 50px;
+}
+  
+.slider-text a{
+  color: var(--warna-gradasi-kedua);
+  text-decoration: none;
+  margin-bottom: 0;
+}
+
+.slider-text span{
+  font-weight: 600;
+  font-size: 20px;
+}
+.slider-text p{
+  font-style: italic;
+  font-weight: 300;
+}
+.text-bordernya a{
+  background-color: var(--warna-utama);
+  padding: 10px 10px;
+  border-radius: 10px;
+}
+
+/* query media slider */
+
+@media (max-width: 768px) {
+  .bungkus {
+      height: 68vh;
+  }
+
+  .gambar-slider img {
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+  }
+  .slider-text {
+      top: 40%;
+      left: 40%;
+      transform: translate(-50%, -50%);
+      text-align: left;
+  }
+
+  .slider-text h2 {
+      font-size: 30px;
+  }
+
+  .slider-text span {
+      font-size: 13px;
+  }
+
+  .text-bordernya a {
+      padding: 8px 8px;
+      font-size: 10px;
+  }
+  
+  .slider-text p{
+    font-size: 11px;
+  }
+}
+
+
+/* List Kategori */
+.text h2 {
+  font-family: "Inter";
+  text-align: center;
+  font-size: 35px;
+  line-height: 1.1;
+}
+
+.row-items {
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+  grid-gap: 1rem;
+  align-items: center;
+  text-align: center;
+}
+
+.container-box {
+  background: var(--warna-gradasi-kedua);
+  padding: 50px 10px;
+  border-radius: 4px;
+  transition: all .80s ease 0s;
+  cursor: pointer;
+}
+
+.container-img img {
+  height: 180px;
+  width: 200px;
+  padding: 15px;
+  background: var(--bg-color);
+  box-shadow: 5px 10px 30px rgb(85 85 85 / 20%);
+  border-radius: 20px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.container-box h4 {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.container-box:hover {
+  box-shadow: 5px 10px 30px rgb(55 55 55 / 12%);
+  border: 1px solid transparent;
+  transform: translateY(-3px);
+}
+
+/* query media kategori */
+@media (max-width: 768px) {
+  .row-items {
+    grid-template-columns: 1fr; /* Display items in a single column */
+  }
+
+  .container-box {
+    padding: 30px 10px;
+  }
+
+  .container-img img {
+    height: 150px;
+    width: 170px;
+    padding: 10px;
+  }
+
+  .container-box h4 {
+    font-size: 18px;
+  }
+
+  .text h2 {
+    font-size: 28px;
+  }
+}
+/* list Barang */
+.container-barang{
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: auto;
+}
+.product-card {
+  font-family: "Inter";
+  width: 30%;
+  position: relative;
+  box-shadow: 0 2px 7px #dfdfdf;
+  margin: 50px auto;
+  background: #fafafa;
+}
+
+.badge {
+  position: absolute;
+  left: 0;
+  top: 20px;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 700;
+  background: red;
+  color: #fff;
+  padding: 3px 10px;
+}
+
+.product-tumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  padding: 50px;
+  background: #f0f0f0;
+}
+
+.product-tumb img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.product-details {
+  padding: 30px;
+}
+
+.product-catagory {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--warna-gradasi-utama);
+  margin-bottom: 18px;
+}
+
+.product-details h4 a {
+  font-weight: 500;
+  display: block;
+  margin-bottom: 18px;
+  text-transform: uppercase;
+  color: var(--warna-hitam);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+
+.product-details p {
+  font-size: 15px;
+  line-height: 22px;
+  margin-bottom: 18px;
+  color: var(--warna-hitam);
+}
+
+.product-bottom-details {
+  overflow: hidden;
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+}
+
+.product-bottom-details div {
+  float: left;
+  width: 50%;
+}
+
+.product-price {
+  font-size: 18px;
+  color: var(--warna-utama);
+  font-weight: 600;
+}
+
+.product-price small {
+  font-size: 80%;
+  font-weight: 400;
+  text-decoration: line-through;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.product-links {
+  text-align: right;
+}
+
+.product-links a {
+  background-color: var(--warna-utama);
+  padding: 10px 15px;
+  border-radius: 10px;
+  text-decoration: none;
+  display: inline-block;
+  margin-left: 5px;
+  color: var(--warna-gradasi-kedua);
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+.product-links a:hover {
+  transform: scale(0.9);
+}
+
+/* query media barang */
+@media (max-width: 768px) {
+  .container-barang {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .product-card {
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  .product-details {
+    padding: 20px;
+  }
+
+  .product-tumb {
+    height: 200px;
+    padding: 20px;
+  }
+
+  .product-tumb img {
+    max-height: 100%;
+  }
+
+  .product-details h4 a {
+    font-size: 18px;
+  }
+
+  .product-details p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .product-price {
+    font-size: 16px;
+  }
+
+  .product-links a {
+    font-size: 15px;
+  }
+}
+/* Kolom Pencarian */
+.gambar-cari img {
+  max-width: 78%;
+  height: auto;
+  border-radius: 10px; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.164);
+}
+
+.bungkus-cari {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+}
+
+/* Footer */
+.container{
+  font-family: "Inter";
+	max-width: 80%;
+  height: auto;
+	margin: auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+ul{
+	list-style: none;
+}
+.footer{
+	background-color: var(--warna-utama);
+  padding: 70px 0;
+  
+}
+.footer-col{
+   width: 20%;
+   padding: 20px 20px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: var(--warna-gradasi-utama);
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: var(--warna-gradasi-kedua);
+	text-decoration: none;
+	font-weight: 300;
+	color: var(--warna-gradasi-kedua);
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+
+.end-text {
+  text-align: center;
+  padding-top: 90px;
+}
+
+.end-text p {
+  font-family: "Inter";
+  font-weight: 600;
+  font-size: 30px;
+  color: var(--warna-gradasi-kedua);
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
+

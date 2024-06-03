@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vegebox</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./img/vegebox-512px.png">
+    <!-- CDN Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigasi -->
+    <nav class="navigasi" id="navigasi">
+        <div class="container-nav">
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label> 
+            <div class="logo">
+                <a href="#navigasi">
+                    <img src="./img/vegebox-2048px.png" alt="logo">
+                </a>
+            </div>
+            <div class="bungkus-dropdown">
+                <div class="dropdown">
+                    <a href="#" class="dropbtn">Menu</a>
+                    <div class="dropdown-content">
+                        <a href="#">Tentang Kami</a>
+                        <a href="#">Kontak Kami</a>
+                        <a href="#">Testimoni</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="#" class="dropbtn">Kategori</a>
+                    <div class="dropdown-content">
+                        <a href="#barang-sayur">Sayuran</a>
+                        <a href="#buah">Buah - Buahan</a>
+                        <a href="#bumbu">Bumbu Dapur</a>
+                        <a href="#alatmasak">Peralatan Masak</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="#" class="dropbtn">Bantuan</a>
+                    <div class="dropdown-content">
+                        <a href="#">Cara Pengiriman</a>
+                        <a href="#">Cara Pembayaran</a>
+                        <a href="#">Akun Bermasalah</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="#" class="dropbtn">Account</a>
+                    <div class="dropdown-content">
+                        <a href="#">Profil Saya</a>
+                        <a href="#">Masuk</a>
+                        <a href="#">Daftar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="search" />
+                <div class="symbol">
+                  <svg class="cloud">
+                    <use xlink:href="#cloud" />
+                  </svg>
+                  <svg class="lens">
+                    <use xlink:href="#lens" />
+                  </svg>
+                </div>
+              </div>
+              <!-- Logo comot w3school -->
+              <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 35" id="cloud">
+                  <path d="M31.714,25.543c3.335-2.17,4.27-6.612,2.084-9.922c-1.247-1.884-3.31-3.077-5.575-3.223h-0.021
+                  C27.148,6.68,21.624,2.89,15.862,3.931c-3.308,0.597-6.134,2.715-7.618,5.708c-4.763,0.2-8.46,4.194-8.257,8.919
+                  c0.202,4.726,4.227,8.392,8.991,8.192h4.873h13.934C27.784,26.751,30.252,26.54,31.714,25.543z" />
+                </symbol>
+                <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="lens">
+                  <path d="M15.656,13.692l-3.257-3.229c2.087-3.079,1.261-7.252-1.845-9.321c-3.106-2.068-7.315-1.25-9.402,1.83
+                  s-1.261,7.252,1.845,9.32c1.123,0.748,2.446,1.146,3.799,1.142c1.273-0.016,2.515-0.39,3.583-1.076l3.257,3.229
+                  c0.531,0.541,1.404,0.553,1.95,0.025c0.009-0.008,0.018-0.017,0.026-0.025C16.112,15.059,16.131,14.242,15.656,13.692z M2.845,6.631
+                  c0.023-2.188,1.832-3.942,4.039-3.918c2.206,0.024,3.976,1.816,3.951,4.004c-0.023,2.171-1.805,3.918-3.995,3.918
+                  C4.622,10.623,2.833,8.831,2.845,6.631L2.845,6.631z" />
+                </symbol>
+              </svg>  
+                <ul class="navlogin">
+                    <li class="login"><a href="">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Slider -->
+    <br><br><br>
+    <div class="gambar-slider">
+        <div class="bungkus">
+         <img src="./img/slider-2.jpg" alt="">
+        </div>
+        <div class="slider-text">
+            <h2>Kabar Gembira!</h2>
+            <span>Dapatkan Gratis Ongkir di Toko Kami</span>
+            <p class="italia">syarat dan kententuan berlaku*</p>
+            <br>
+            <div class="text-bordernya"> 
+                <a href="#barang-sayur">Belanja Sekarang</a>
+            </div>
+        </div>
+    </div>
+        <!--section-->
+        <br><br>
+        <section class="container">
+            <div class="text">
+                <h2>Kategori Produk</h2>
+                <br><br>
+            </div>
+            <div class="row-items">
+                <div class="container-box">
+                    <a href="#barang-sayur">
+                        <div class="container-img">
+                            <img src="./img/sayur-1.png">
+                        </div>
+                    </a>
+                    <h4>Sayuran</h4>
+                </div>
+                <div class="container-box">
+                    <a href="#buah">
+                        <div class="container-img">
+                            <img src="./img/buah-1.png">
+                        </div>
+                    </a>
+                    <h4>Buah - Buahan</h4>
+                </div>
+                <div class="container-box">
+                    <a href="#bumbu">
+                        <div class="container-img">
+                            <img src="./img/bumbu-1.png">
+                        </div>
+                    </a>
+                    <h4>Bumbu Dapur</h4>
+                </div>
+                <div class="container-box">
+                    <a href="#alatmasak">
+                        <div class="container-img">
+                            <img src="./img/dapur-1.jpg">
+                        </div>
+                    </a>
+                    <h4>Peralatan Masak</h4>
+                </div>
+            </div>
+        </section>
+
+    <!-- List barang -->
+    <br><br><br>
+    <br><br>
+    <div class="container-barang" id="barang-sayur">
+        <div class="product-card">
+            <div class="badge">Hot</div>
+            <div class="product-tumb">
+                <img src="./img/bayam.png" alt="">
+            </div>
+            <div class="product-details">
+                <span class="product-catagory">SAYURAN</span>
+                <h4><a href="">Bayam Import</a></h4>
+                <p>Sayur bayam dengan kualitas terbaik, dari petani negara jepang.</p>
+                <div class="product-bottom-details">
+                    <div class="product-price"><small>Rp.29.000/kg</small>Rp.15.000/kg</div>
+                    <div class="product-links">
+                        <a href="#">Cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-tumb">
+                <img src="./img/wortel.png" alt="">
+            </div>
+            <div class="product-details">
+                <span class="product-catagory">SAYURAN</span>
+                <h4><a href="">WORTEL LOKALAN</a></h4>
+                <p>Sayur wortel dengan kualitas terbaik, dari petani negara swedia.</p>
+                <div class="product-bottom-details">
+                    <div class="product-price"><small>Rp.29.000/kg</small>Rp.15.000/kg</div>
+                    <div class="product-links">
+                        <a href="#">Cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="badge">Hot</div>
+            <div class="product-tumb">
+                <img src="./img/sayur-1.png" alt="">
+            </div>
+            <div class="product-details">
+                <span class="product-catagory">SAYURAN</span>
+                <h4><a href="">PAKET SAYUR IMPORT</a></h4>
+                <p>Sayur import pilihan untuk keluarga anda dan pastinya sehat bergizi.</p>
+                <div class="product-bottom-details">
+                    <div class="product-price"><small>Rp.290.000/pcs</small>Rp.250.000/pcs</div>
+                    <div class="product-links">
+                        <a href="#">Cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card" id="buah">
+            <div class="product-tumb">
+                <img src="./img/apel-canada.png" alt="">
+            </div>
+            <div class="product-details">
+                <span class="product-catagory">BUAH - BUAHAN</span>
+                <h4><a href="">APEL CANADA</a></h4>
+                <p>Buah apel dengan kualitas terbaik, dari petani terbaik di negara canada.</p>
+                <div class="product-bottom-details">
+                    <div class="product-price"><small>Rp.29.000/kg</small>Rp.15.000/kg</div>
+                    <div class="product-links">
+                        <a href="#">Cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-tumb">
+                <img src="./img/jeruk.png" alt="">
+            </div>
+            <div class="product-details">
+                <span class="product-catagory">BUAH - BUAHAN</span>
+                <h4><a href="">JERUK IMPORT</a></h4>
+                <p>Buah jeruk dengan kualitas terbaik, dari petani terbaik di seluruh dunia.</p>
+                <div class="product-bottom-details">
+                    <div class="product-price"><small>Rp.29.000/kg</small>Rp.15.000/kg</div>
+                    <div class="product-links">
+                        <a href="#">Cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="badge">Hot</div>
+            <div class="product-tumb">
+                <img src="./img/buah-1.png" alt="">
+            </div>
+            <div class="product-details">
+                <span class="product-catagory">BUAH - BUAHAN</span>
+                <h4><a href="">PAKET BUAH LOKAL</a></h4>
+                <p>Buah asli Indonesia pilihan untuk keluarga anda dan pastinya sehat.</p>
+                <div class="product-bottom-details">
+                    <div class="product-price"><small>Rp.200.000/pcs</small>Rp.150.000/pcs</div>
+                    <div class="product-links">
+                        <a href="#">Cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card" id="bumbu">
+            <div class="product-tumb">
+                <img src="./img/masako.png" alt="">
+            </div>
+            <div class="product-details">
+                <span class="product-catagory">BUMBU DAPUR</span>
+                <h4><a href="">MASAKO</a></h4>
+                <p>Bumbu masakan terbaik untuk semua masakan indonesia.</p>
+                <div class="product-bottom-details">
+                    <div class="product-price"><small>Rp.2.000/pcs</small>Rp.1.500/pcs</div>
+                    <div class="product-links">
+                        <a href="#">Cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card" id="alatmasak">
+            <div class="badge">Hot</div>
+            <div class="product-tumb">
+                <img src="./img/panci.png" alt="">
+            </div>
+            <div class="product-details">
+                <span class="product-catagory">PERALATAN MASAK</span>
+                <h4><a href="">PAKET PANCI</a></h4>
+                <p>Panci pilihan dengan teknologi terbaik untuk peralatan dapur anda.</p>
+                <div class="product-bottom-details">
+                    <div class="product-price"><small>Rp.5.229.000</small>Rp.4.415.000</div>
+                    <div class="product-links">
+                        <a href="#modal-btn">Cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="badge">Hot</div>
+            <div class="product-tumb">
+                <img src="./img/kompor.png" alt="">
+            </div>
+            <div class="product-details">
+                <span class="product-catagory">PERALATAN MASAK</span>
+                <h4><a href="">KOMPOR LISTRIK</a></h4>
+                <p>Kompor yang ramah lingkungan untuk peralatan dapur anda.</p>
+                <div class="product-bottom-details">
+                    <div class="product-price"><small>Rp.2.550.000</small>Rp.1.000.000</div>
+                    <div class="product-links">
+                        <a href="#">Cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <br><br><br><br>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Menu</h4>
+                    <ul>
+                        <li><a href="#">Testimoni</a></li>
+                        <li><a href="#">Tentang Kami</a></li>
+                        <li><a href="#">Kontak Kami</a></li>
+                        <li><a href="#">Program Affiliate</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Bantuan</h4>
+                    <ul>
+                        <li><a href="#">Cara Pengiriman</a></li>
+                        <li><a href="#">Cara Pembayaran</a></li>
+                        <li><a href="#">Akun Bermasalah</a></li>
+                        <li><a href="#">Profil Saya</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Kategori Barang</h4>
+                    <ul>
+                        <li><a href="#">Sayuran</a></li>
+                        <li><a href="#">Buah - Buahan</a></li>
+                        <li><a href="#">Bumbu Dapur</a></li>
+                        <li><a href="#">Peralatan Masak</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Follow Kami</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Pembayaran</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-cc-visa"></i></a>
+                        <a href="#"><i class="fa-brands fa-cc-mastercard"></i></a>
+                        <a href="#"><i class="fa-brands fa-paypal"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="end-text">
+            <p>Template by | Putu Agus Wiadnyana </p>
+        </div>
+    </footer>
+ </body>
+ </html>
