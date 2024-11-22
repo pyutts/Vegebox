@@ -1,5 +1,5 @@
 # Vegebox - Website Toko Online Produk Segar
-![Logo Vegebox](assets/images/logo.png)
+![Logo Vegebox](img/vegebox-2048px.png)
 
 Vegebox adalah website toko online yang menyediakan berbagai produk segar seperti sayuran, buah-buahan, bumbu dapur, dan peralatan masak. Website ini dirancang untuk memberikan pengalaman belanja yang mudah, cepat, dan nyaman.
 
